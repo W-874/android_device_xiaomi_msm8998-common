@@ -325,6 +325,11 @@ PRODUCT_PACKAGES += \
     init.uclamp.rc \
     ueventd.qcom.rc
 
+# Sagit uses mmd exclusively; other msm8998 products keep legacy boot-time swap.
+ifneq ($(TARGET_PRODUCT),uwu_sagit)
+PRODUCT_PACKAGES += init.zram.legacy.rc
+endif
+
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.panel_info.sh \
