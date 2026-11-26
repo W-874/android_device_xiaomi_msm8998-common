@@ -236,6 +236,26 @@
       "ResetOnInit": true
     },
     {
+      "Name": "DragoniteTopAppCpusetCpus",
+      "Path": "/dev/cpuset/top-app/cpus",
+      "Values": [
+        "0-3",
+        "0-7"
+      ],
+      "DefaultIndex": 1,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DragoniteBackgroundCpusetCpus",
+      "Path": "/dev/cpuset/background/cpus",
+      "Values": [
+        "0",
+        "0-1"
+      ],
+      "DefaultIndex": 1,
+      "ResetOnInit": true
+    },
+    {
       "Name": "CPUBWHystTriggerCount",
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count",
       "Values": [
@@ -403,6 +423,18 @@
       "Node": "CDCpusetCpus",
       "Duration": 480,
       "Value": "0-1"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_TOP_APP_CPUSET",
+      "Node": "DragoniteTopAppCpusetCpus",
+      "Duration": 480,
+      "Value": "0-3"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_BACKGROUND_CPUSET",
+      "Node": "DragoniteBackgroundCpusetCpus",
+      "Duration": 900,
+      "Value": "0"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
