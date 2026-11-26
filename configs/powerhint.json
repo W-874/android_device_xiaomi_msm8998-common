@@ -306,6 +306,46 @@
   ],
   "Actions": [
     {
+      "PowerHint": "AX_DRAGONITE_LIGHT",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 280,
+      "Value": "1132800"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_LIGHT",
+      "Node": "UclampTALatency",
+      "Duration": 280,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_HEAVY",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 480,
+      "Value": "1497600"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_HEAVY",
+      "Node": "UclampTALatency",
+      "Duration": 480,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_HEAVY",
+      "Node": "UclampTAMin",
+      "Duration": 480,
+      "Value": "78"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Type": "MaskHint",
+      "Value": "AX_DRAGONITE_LIGHT"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Type": "MaskHint",
+      "Value": "AX_DRAGONITE_HEAVY"
+    },
+    {
       "PowerHint": "VIDEO_ENCODE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
