@@ -183,6 +183,7 @@
       "Values": [
         "515000000",
         "414000000",
+        "342000000",
         "257000000"
       ],
       "ResetOnInit": true
@@ -302,9 +303,63 @@
           "1"
       ],
       "DefaultIndex": 0
+    },
+    {
+      "Name": "AxLittleGovernor",
+      "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor",
+      "Values": ["powersave", "performance", "schedutil"],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "AxBigGovernor",
+      "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_governor",
+      "Values": ["powersave", "performance", "schedutil"],
+      "ResetOnInit": true
     }
   ],
   "Actions": [
+    {
+      "PowerHint": "AX_DRAGONITE_CPU_PERFORMANCE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1094400"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_CPU_PERFORMANCE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1132800"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_GPU_PERFORMANCE",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "342000000"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_GOVERNOR_PERFORMANCE",
+      "Node": "AxLittleGovernor",
+      "Duration": 0,
+      "Value": "performance"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_GOVERNOR_PERFORMANCE",
+      "Node": "AxBigGovernor",
+      "Duration": 0,
+      "Value": "performance"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_GOVERNOR_POWERSAVE",
+      "Node": "AxLittleGovernor",
+      "Duration": 0,
+      "Value": "powersave"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_GOVERNOR_POWERSAVE",
+      "Node": "AxBigGovernor",
+      "Duration": 0,
+      "Value": "powersave"
+    },
     {
       "PowerHint": "AX_DRAGONITE_LIGHT",
       "Node": "CPUBigClusterMinFreq",
