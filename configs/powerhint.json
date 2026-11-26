@@ -336,6 +336,22 @@
       "Value": "78"
     },
     {
+      "PowerHint": "AX_DRAGONITE_GPU_RENDERING",
+      "Node": "GPUMinFreq",
+      "Duration": 480,
+      "Value": "414000000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Type": "MaskHint",
+      "Value": "AX_DRAGONITE_GPU_RENDERING"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Type": "EndHint",
+      "Value": "AX_DRAGONITE_GPU_RENDERING"
+    },
+    {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Type": "MaskHint",
       "Value": "AX_DRAGONITE_LIGHT"
