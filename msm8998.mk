@@ -325,8 +325,11 @@ PRODUCT_PACKAGES += \
     init.uclamp.rc \
     ueventd.qcom.rc
 
+# Sagit's UFS host uses the legacy request queue; BFQ is blk-mq only.
+ifeq ($(TARGET_PRODUCT),uwu_sagit)
+PRODUCT_VENDOR_PROPERTIES += ro.vendor.ufs.scheduler=cfq
+else
 # Sagit uses mmd exclusively; other msm8998 products keep legacy boot-time swap.
-ifneq ($(TARGET_PRODUCT),uwu_sagit)
 PRODUCT_PACKAGES += init.zram.legacy.rc
 endif
 
