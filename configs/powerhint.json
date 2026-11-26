@@ -220,8 +220,10 @@
       "Path": "/dev/cpuset/camera-daemon/cpus",
       "Values": [
         "0-5",
-        "0-7"
+        "0-7",
+        "0-1"
       ],
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -395,6 +397,12 @@
       "Node": "GPUMinFreq",
       "Duration": 480,
       "Value": "414000000"
+    },
+    {
+      "PowerHint": "AX_DRAGONITE_CAMERA_CPUSET",
+      "Node": "CDCpusetCpus",
+      "Duration": 480,
+      "Value": "0-1"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -673,6 +681,12 @@
       "Node": "UclampCDMin",
       "Duration": 1000,
       "Value": "100"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "CDCpusetCpus",
+      "Duration": 1000,
+      "Value": "0-7"
     },
     {
       "PowerHint": "CAMERA_STREAMING",
